@@ -30,7 +30,7 @@ df.columns = df.iloc[0]
 df = df[1:]
 df.set_index(df.columns[0],inplace=True)
 account_sid = 'ACb658d1d5610d3f63137449e42d15859a'
-auth_token = '00305a8bea1bcfb33de9b52fc68ebdc8'
+auth_token = 'f7ad977b0cb492f73d95061306a5ca46'
 client = Client(account_sid, auth_token)
 def to_markdown(text):
   text = text.replace('•', '  *')
