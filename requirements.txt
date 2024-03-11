@@ -1,0 +1,6 @@
+twilio
+ipython
+google-generativeai
+googleapiclient
+BeautifulSoup4
+markdown
