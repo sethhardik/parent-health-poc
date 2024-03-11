@@ -1,6 +1,6 @@
 twilio
 ipython
 google-generativeai
-googleapiclient
+google-api-python-client
 BeautifulSoup4
 markdown
