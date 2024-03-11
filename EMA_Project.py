@@ -12,10 +12,10 @@ from bs4 import BeautifulSoup
 from markdown import markdown
 import re
 import os
-from streamlit_extras.app_logo import add_logo
+# from streamlit_extras.app_logo import add_logo
 
-def logo():
-    add_logo("/Users/deepanshumishra/EMA Code/logo.png", height=300)
+# def logo():
+#     add_logo("/Users/deepanshumishra/EMA Code/logo.png", height=300)
 api_key_sheets= 'AIzaSyAsFcHXA4Klz9HsRHKak_QeyDmzU7CBOdw'
 url="https://docs.google.com/spreadsheets/d/1UwbQZIpONmoUb12TFXpVOSxUvFT8xeOTOlcLoLSdq4c/edit?usp=sharing"
 spreadsheet_id = url.split("/")[5]
@@ -47,7 +47,7 @@ def is_valid_mobile_number(mobile_number):
   return mobile_number.isdigit() and len(mobile_number) == 10
 st.title('AgeWell Assist')
 
-logo()
+# logo()
 
 st.write("AgeWell Assist")
 
