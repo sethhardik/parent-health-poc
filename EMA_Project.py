@@ -98,7 +98,7 @@ if mobile_number_child:
                 else:
                     morning_message ="Morning Message not found."
                 account_sid = 'ACb658d1d5610d3f63137449e42d15859a'
-                auth_token = '00305a8bea1bcfb33de9b52fc68ebdc8'
+                auth_token = 'f7ad977b0cb492f73d95061306a5ca46'
                 client = Client(account_sid, auth_token)
 
                 from_whatsapp_number = 'whatsapp:+14155238886'
