@@ -16,8 +16,8 @@ import os
 
 # def logo():
 #     add_logo("/Users/deepanshumishra/EMA Code/logo.png", height=300)
-api_key_sheets= 'AIzaSyAsFcHXA4Klz9HsRHKak_QeyDmzU7CBOdw'
-url="https://docs.google.com/spreadsheets/d/1UwbQZIpONmoUb12TFXpVOSxUvFT8xeOTOlcLoLSdq4c/edit?usp=sharing"
+api_key_sheets= '<google_api_key>'
+url="<sheets_url>"
 spreadsheet_id = url.split("/")[5]
 RANGE_NAME = 'Sheet1!A1:E6'
 def authenticate_sheets(api_key_sheets):
@@ -29,13 +29,13 @@ df = pd.DataFrame(values)
 df.columns = df.iloc[0]
 df = df[1:]
 df.set_index(df.columns[0],inplace=True)
-account_sid = 'ACb658d1d5610d3f63137449e42d15859a'
-auth_token = 'f7ad977b0cb492f73d95061306a5ca46'
+account_sid = '<twilio account id>'
+auth_token = '<twilio auth token>'
 client = Client(account_sid, auth_token)
 def to_markdown(text):
   text = text.replace('•', '  *')
   return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
-genai.configure(api_key='AIzaSyDrl058zWba4yT-MKpDqU5S5gak4tw-l_M')
+genai.configure(api_key='<google llm key>')
 model = genai.GenerativeModel('gemini-pro')
 
 # Company information (replace with your company details)
@@ -97,8 +97,8 @@ if mobile_number_child:
                     morning_message = morning_message_match.group(1).strip()
                 else:
                     morning_message ="Morning Message not found."
-                account_sid = 'ACb658d1d5610d3f63137449e42d15859a'
-                auth_token = 'f7ad977b0cb492f73d95061306a5ca46'
+                account_sid = '<twilio account id>'
+                auth_token = '<twilio auth token>'
                 client = Client(account_sid, auth_token)
 
                 from_whatsapp_number = 'whatsapp:+14155238886'
@@ -106,7 +106,7 @@ if mobile_number_child:
                 to_whatsapp_number = 'whatsapp:+917982415452'
 
                 message = client.messages.create(body='Report',
-                       media_url='https://i.ibb.co/j9CbryY/9b3b0209-5d74-4f04-a38f-ca59d471b28c.jpg',
+                       media_url='<image server link>',
                        from_=from_whatsapp_number,
                        to='whatsapp:+91'+str(mobile_number_child))
                 message = client.messages.create(
